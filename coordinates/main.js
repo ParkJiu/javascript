@@ -3,7 +3,6 @@ const horizontal = document.querySelector(".horizontal");
 const target = document.querySelector(".target");
 const tag = document.querySelector(".tag");
 const targetRect = target.getBoundingClientRect();
-console.log(targetRect);
 const targeHalfWidth = targetRect.width / 2;
 const targeHalfHeight = targetRect.height / 2;
 
