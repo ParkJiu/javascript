@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: brown;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      img {
+        z-index: 100;
+        will-change: opacity;
+      }
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="img/avatar.png" alt="avatar" />
+      <h1 id="brand">Dream Coding</h1>
+      <h3>Don't forget to code your dream</h3>
+    </section>
+    <span>Hello World!</span>
+    <script>
+      const section = document.querySelector('section');
+      const h2 = document.createElement('h2');
+      // setAttribute를 이용해 key와 value를 전달하면 속성이 설정 됨
+      h2.setAttribute('class', 'title'); // <h2 class = "title"></h2>
+      h2.textContent = "This is a title"; // <h2 class = "title">This is a title</h2>
+      // section.appendChild(h2);
+      // section.removeChild(h2); 
+      /**
+       * element의 reference(변수)를 가지고 있으면서 조금 더 많은 동작을 해야 한다면 createElement를 만들어서 쓰는 것이 좋고,
+       * 한 번 만들면 다시 바꿀일이 없는 경우 innerHTML을 이용해 동적으로 추가해도 괜찮음
+       */
+      const h3 = document.querySelector('h3');
+      section.insertBefore(h2, h3);
+
+      /**
+       *  위처럼 element를 만들지 않고 innerHTML을 만들어도 되지만, 
+          h2태그에 있는 text가 변경될 때마다 section에 있는 전체적인 HTML을 계속 업데이트 하게 되면
+          새로 추가된 아이들의 DOMTree, RenderTree를 만드는 등 이런 일들이 번잡하게 일어남
+          따라서 부분적으로 변경이 일어나야 한다면, 위의 코드처럼 해당하는 h2.textContent를 업데이트 하는 것이 더 효율적
+       */
+      
+      // section.innerHTML = `
+      //     <img src="img/avatar.png" alt="avatar" />
+      //     <h1 id="brand">Dream Coding</h1>
+      //     <h2>
+      //   `
+
+
+    </script>
+  </body>
+</html>
