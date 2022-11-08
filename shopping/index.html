@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Applicaion</title>
   <script src="main.js" defer></script>
-<script src="https://kit.fontawesome.com/a81b1c0ad4.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a81b1c0ad4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,14 +16,18 @@
     </header>
     <div class="item__list">
       <ul class="items">
-
       </ul>
     </div>
     <footer class="footer">
-      <input type="text" class="footer__input" placeholder="Add shopping list">
-      <button class="footer__button">
-        <i class="fas fa-plus"></i>
-      </button>
+      <!-- 사용자에게 입력을 받아오는 경우 form을 이용하면 유용하게 사용할 수 있음 -->
+      <!-- click과 keypress 등을 등록할 필요 없이 form에 submit 기능이 있음 -->
+      <form class="new-form">
+        <input type="text" class="footer__input" placeholder="Add shopping list">
+        <!-- type을 명시해주는 것이 좋음 -->
+        <button type="submit" class="footer__button">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
     </footer>
   </section>
   
